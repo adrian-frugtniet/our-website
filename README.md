@@ -2,6 +2,14 @@
 
 So you want to build a React app that renders on both the server and client? And all the existing literature seems written for nuclear physicists?
 
+## Introduction
+
+Don't laugh, but I've found building user interfaces in React refreshingly simple compared to what I'm used to from PHP and Ruby.
+
+### Basic architecture
+
+At the bottom of my pile of Express routes, I have an app that takes any route it's given and hands it off to React for rendering.  
+
 ## Keep React routes out of your root-level component
 
 On the server side, you need to use `RouterContext`; on the client, you use `Router`. If you're using Redux, its `Provider` thingy needs to wrap the root-level object, which is one of those two.
