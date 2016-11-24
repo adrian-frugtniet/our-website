@@ -9,14 +9,14 @@ var path    = require('path'),
 
 const IS_PROD = NODE_ENV === 'production';
 
-var BUILD_DIR = path.resolve(__dirname, 'dist');
-var APP_DIR = path.resolve(__dirname, 'app');
+var BUILD_DIR = path.resolve(__dirname, '../dist');
+var APP_DIR = path.resolve(__dirname, '../app');
 
 var config = {
   name: "Client side",
   devServer: {
     hot: true,
-    contentBase: './public/',
+    contentBase: '../public/',
     proxy: {
       '/_api': {
         target: 'http://localhost:3000/',
